@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!--
+     Constraint Layout: posiciona e alinha os elementos
+
+     android:layout_width="match_parent" e android:layout_height="wrap_content": Definem a largura como correspondente
+     à largura do pai (match_parent) e altura como wrap_content, se ajusta à altura da Constraint Layout
+  -->
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Cesta de frutas" />
+
+
+    <!--
+   android:id="@+id/nome" : Define um ID para o TextVew "nome"
+   android:layout_width="0dp": Largura definida como 0dp (será determinada pelo layout da Constraint View)
+   android:layout_height="wrap_content": Altura dinamica (se ajusta para envolver o conteúdo dentro do elemento)
+   android:layout_margin="16dp": Margem do elemento definida como 16dp
+   android:textSize="18sp": Tamanho do texto definido como 18sp (Pixels Escalados)
+   app:layout_constraintEnd_toEndOf="parent": Alinha ao lado direito do layout pai
+   app:layout_constraintStart_toStartOf="parent": Alinha ao lado direito do layout pai
+   app:layout_constraintTop_toTopOf="parent": Alinha ao topo do layout pai
+   tools:text="Cesta de frutas"
+-->
+
+
+    <TextView
+        android:id="@+id/descricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nome"
+        tools:text="Laranja, manga e uva" />
+
+        <!--
+     android:id="@+id/descricao" : Define um ID para o TextVew "descricao"
+     android:layout_width="0dp": Largura definida como 0dp (será determinada pelo layout da Constraint View)
+     android:layout_height="wrap_content": Altura dinamica (se ajusta para envolver o conteúdo dentro do elemento)
+     android:layout_marginStart="16dp": Margem do topo do elemento definida como 16dp
+     android:layout_marginEnd="16dp": Margem do final do elemento definida como 16dp
+     app:layout_constraintEnd_toEndOf="parent": Alinha ao lado direito do layout pai
+     app:layout_constraintStart_toStartOf="parent": Alinha ao lado direito do layout pai
+     app:layout_constraintTop_toBottomOf="@id/nome": Alinha a parte inferior ao TextView "Nome"
+    tools:text="Laranja, manga e uva": Definição do texto que irá ser exibido
+    -->
+
+    <TextView
+        android:id="@+id/valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descricao"
+        tools:text="19.99" />
+
+        <!--
+     android:id="@+id/valor" : Define um ID para o TextVew "valor"
+     android:layout_width="0dp": Largura definida como 0dp (será determinada pelo layout da Constraint View)
+     android:layout_height="wrap_content": Altura dinamica (se ajusta para envolver o conteúdo dentro do elemento)
+     android:layout_marginStart="16dp": Margem do topo do elemento definida como 16dp
+     android:layout_marginEnd="16dp": Margem do final do elemento definida como 16dp
+     app:layout_constraintEnd_toEndOf="parent": Alinha ao lado direito do layout pai
+     app:layout_constraintStart_toStartOf="parent": Alinha ao lado direito do layout pai
+     app:layout_constraintTop_toBottomOf="@id/descricao": Alinha a parte inferior ao TextView "descricao"
+     tools:text="19.99": Definição do texto que irá ser exibido
+    -->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

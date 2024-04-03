@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+    Constraint Layout: Recurso que permite posicionar elementos
+    de maneira dinâmica
+
+    android:layout_width="match_parent" -> Largura da ConstraintLayout ocupa o espaço disponível dentro do pai
+    android:layout_height="match_parent" -> Altura ocupa o espaço disponível do pai
+    -->
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/produto_item" />
+
+    <!--
+    RecyclerView: Componente responsável por exibir a listagem de dados
+    fazendo a "reciclagem" das visualizações dos itens
+
+    android:id="@+id/recyclerView" -> Define o ID da Recycler View
+
+    android:layout_width="0dp" e android:layout_height="0dp" -> Definem largura e altura do Recycler View como
+    0 dp (será determinado pelo layout definido no ConstraintLayout)
+
+    app:layout_constraintBottom_toBottomOf="parent" -> Alinha à parte inferior do layout pai
+    app:layout_constraintEnd_toEndOf="parent" -> Alinha ao lado direito do layout pai
+    app:layout_constraintStart_toStartOf="parent" -> Alinha ao lado direito do layout pai
+    app:layout_constraintTop_toTopOf="parent" -> Alinha ao topo do layout pai
+-->
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_add_24" />
+
+    <!--
+      FloatingActionButton: Botão flutuante de ação usado para realizar
+      funções específicas na tela. Nesse caso foi posicionado na parte inferior
+      direita do layout
+
+
+      android:id="@+id/floatingActionButton": Define o ID do Botão
+
+      android:layout_width="wrap_content" e android:layout_height="wrap_content": Definem largura e altura do Botão
+      como wrap_content", fazendo com que o botão se ajuste dinanicamente sem algo fixo
+
+      android:layout_margin="16dp": Define uma margem de 16dp
+
+       app:layout_constraintBottom_toBottomOf="parent" -> Parte inferior alinhada ao layout pai
+       app:layout_constraintEnd_toEndOf="parent" -> Parte direita alinhada ao layout pai
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

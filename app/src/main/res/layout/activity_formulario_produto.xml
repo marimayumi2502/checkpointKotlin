@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!--
+     ScrollView: Componente que permite o rolamento do conteúdo, garantindo uma visualização
+      de todos os dados mesmo em dispositivos menores(já que existem diversos elementos na tela)
+
+    android:layout_width="match_parent" -> Largura da ConstraintLayout ocupa o espaço disponível dentro do pai
+    android:layout_height="match_parent" -> Altura ocupa o espaço disponível do pai
+    -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.activity.FormularioProdutoActivity">
+
+        <!--
+            ConstraintLayout: Dentro da ScrollView ele é usado para organizar os
+            elementos na tela de forma flexível
+           -->
+
+        <EditText
+            android:id="@+id/nome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Nome"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--
+          EditText: Componente usado para inserção e edição de texto. Este está definindo
+          nome do produto.
+
+          android:layout_width="0dp" e android:layout_height="wrap_content": Define a largura e altura
+          do EditText como 0dp, ou seja,  ele se irá se ajustar dinamicamente de acordo com o que foi definido no layout.
+
+          android:layout_margin="16dp": Define as margens do EditText.
+          android:hint="Nome": Define um texto "Nome".
+
+          Recursos para alinhamento:
+          app:layout_constraintEnd_toEndOf="parent" -> O elemento vai até a borda direita do layout pai (alinhamento)
+          app:layout_constraintStart_toStartOf="parent" -> O elemento começa na margem esquerda do layout pai
+          app:layout_constraintTop_toTopOf="parent" -> O elemento começa no topo do layout pai
+
+      -->
+
+        <EditText
+            android:id="@+id/descricao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Descrição"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/nome"
+            app:layout_constraintStart_toStartOf="@+id/nome"
+            app:layout_constraintTop_toBottomOf="@+id/nome" />
+
+        <!--
+          EditText para descrição do produto:
+
+          android:id="@+id/descricao": Define um ID para o EditText "Descricao"
+          android:layout_width="0dp" e android:layout_height="wrap_content": Define a largura e altura
+          do EditText como 0dp, ou seja,  ele se irá se ajustar dinamicamente de acordo com o que foi definido no layout.
+
+          Recursos para alinhamento
+          app:layout_constraintEnd_toEndOf="@+id/nome" -> Define que esse EdiText deve estar alinhado com o EditText "Nome"
+          app:layout_constraintStart_toStartOf="@+id/nome" -> Define  que o início deve estar alinhado com o início do Editext "Nome"
+          app:layout_constraintTop_toBottomOf="@+id/nome" -> Define que o topo deve estar abaixo do EditText "Nome"
+      -->
+
+        <EditText
+            android:id="@+id/valor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Valor"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="@+id/descricao"
+            app:layout_constraintStart_toStartOf="@+id/descricao"
+            app:layout_constraintTop_toBottomOf="@+id/descricao" />
+
+        <!--
+         EditText para valor do produto:
+
+         android:id="@+id/descricao": Define um ID para o EditText "Descricao"
+         android:layout_width="0dp" e android:layout_height="wrap_content": Define a largura
+         do EditText como 0dp, ou seja,  ele se irá se ajustar dinamicamente de acordo com o que foi definido no layout.
+
+         Recursos para alinhamento
+         app:layout_constraintEnd_toEndOf="@+id/descricao" -> Define que esse EdiText deve estar alinhado com o EditText "Descricao"
+         app:layout_constraintStart_toStartOf="@+id/descricao" -> Define  que o início deve estar alinhado com o início do Editext "Descricao"
+         app:layout_constraintTop_toBottomOf="@+id/descricao" -> Define que o topo deve estar abaixo do EditText "Descricao"
+     -->
+
+        <Button
+            android:id="@+id/botao_salvar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Salvar"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/valor"/>
+
+        <!--
+
+        android:id="@+id/botao_salvar": Define um ID para o botão
+        android:layout_width="0dp" e android:layout_height="wrap_content": Definem largura e altura (largura
+        se ajusta de acordo com o definido no layout)
+
+        android:layout_margin="16dp": Define as margens ao redor do botão (no caso de 16 dp)
+        android:text="Salvar": Define o texto do botão
+
+        Recursos de alinhamento (layout):
+
+         app:layout_constraintBottom_toBottomOf="parent" -> A parte inferior do botão deve estar alinhada com o layout pai
+         app:layout_constraintEnd_toEndOf="parent" -> Lado direito do botão deve estar alinhado com o layout pai
+         app:layout_constraintStart_toStartOf="parent" -> Start do botão deve estar alinhado com o layout pai
+         app:layout_constraintTop_toBottomOf="@id/valor" -> O topo do botão está abaixo do EditTex "valor"
+
+
+    -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
