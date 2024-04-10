@@ -19,6 +19,16 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        /*
+O método onCreate() é chamado quando a atividade é criada.
+savedInstanceState é um parâmetro que contém dados salvos do estado anterior da atividade, como quando a atividade é recriada após uma mudança de configuração.
+O Bundle é uma coleção de dados chave-valor que podem ser usados para passar informações entre componentes do Android, como atividades.
+Neste contexto, savedInstanceState é usado para restaurar o estado anterior da atividade, se disponível.
+super.onCreate(savedInstanceState) chama a implementação do método onCreate() da classe pai (AppCompatActivity), garantindo que o ciclo de vida da atividade seja gerenciado corretamente.
+}
+*
+*/
     }
 
 
@@ -41,7 +51,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
                 /*
               /*
-   recyclerView.adapter = ListaProdutosAdapter: recebe a losta de prodtos obtidas no DAO
+   recyclerView.adapter = ListaProdutosAdapter: recebe a lista de prodtos obtidas no DAO
 *
 */
         *
