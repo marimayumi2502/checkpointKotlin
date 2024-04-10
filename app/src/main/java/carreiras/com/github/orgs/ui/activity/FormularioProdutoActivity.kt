@@ -20,8 +20,9 @@ class FormularioProdutoActivity : AppCompatActivity(R.layout.activity_formulario
     /*
     A classe FormularioProdutoActivity herda da classe AppCompatActivity
 
-    R.layout.activity_formulario_produto: define o layout da activity
-    o layout definido em activity_formulario_produto.xml será usado para exibir a interface
+    R.layout.activity_formulario_produto é uma referência a um recurso de layout XML dentro do projeto Android.
+
+    quando a FormularioProdutoActivity é iniciada, ela usa o layout definido em activity_formulario_produto.xml como sua interface de usuário.
 *
 */
 
@@ -29,12 +30,21 @@ class FormularioProdutoActivity : AppCompatActivity(R.layout.activity_formulario
         super.onCreate(savedInstanceState)
 
             /*
-      Este método é chamado quando a activity é criada
-      Ele chama o método super.onCreate(savedInstanceState)
+     O método onCreate() é chamado quando a atividade é criada.
+     savedInstanceState é um parâmetro que contém dados salvos do estado anterior da atividade, como quando a atividade é recriada após uma mudança de configuração.
+     O Bundle é uma coleção de dados chave-valor que podem ser usados para passar informações entre componentes do Android, como atividades.
+     Neste contexto, savedInstanceState é usado para restaurar o estado anterior da atividade, se disponível.
+     super.onCreate(savedInstanceState) chama a implementação do método onCreate() da classe pai (AppCompatActivity), garantindo que o ciclo de vida da atividade seja gerenciado corretamente.
+}
     *
     */
 
         val botaoSalvar = findViewById<Button>(R.id.botao_salvar)
+
+        /*
+       O código define um listener para o botão botaoSalvar, que é ativado quando o botão é clicado. Isso captura os dados inseridos nos campos de
+       texto e cria um objeto Produto com esses dados.
+*/
 
         botaoSalvar.setOnClickListener {
             val campoNome = findViewById<EditText>(R.id.nome)
